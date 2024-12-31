@@ -1,0 +1,177 @@
+<!doctype html>
+<!doctype html>
+<html lang="en">
+<head>
+<title>SVECW Book Hub</title>
+<meta charset="utf-8">
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width" initial-scale=1>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<style>
+body{
+  background-image: url('https://img.freepik.com/premium-photo/book-stack-library-room-blurred-bookshelf-background_42691-514.jpg');
+  background-size:100% 100%;
+ background-repeat:no-repeat;
+opacity:0.9;
+}
+
+       
+        h1 {
+            margin-top: 100px;
+            font-size: 3rem;
+            text-align: center;
+            text-shadow: 1px 1px 2px #000;
+        }
+
+form{
+background-color: #fff;
+			padding: 10px;
+			border-radius: 10px;
+			box-shadow: 2px 2px 5px #000;
+}
+input[type=text], input[type=password], input[type=email] {
+			width: 50%;
+			padding: 5px 10px;
+			margin: 5px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+			font-size: 1.2rem;
+		}
+
+button {
+			background-color: #4CAF50;
+			color: #fff;
+			padding: 5px 10px;
+			margin:5px 0;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			font-size: 1.2rem;
+			width: 50%;
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+
+</style>
+
+
+
+
+<meta name="viewport" content="width=device-width" initial-scale="1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+</head>
+<body >
+<div class="back">
+<div class = "container">
+<br>
+<h1 align="center"> SVECW BOOK Hub</h1><BR>
+<div class="container" align="center" id="c">
+<br>
+ <h3 >"Unlock Your Learning Potential at this Hub - Your Gateway to Knowledge"</h3><br>
+        <img src="https://img.freepik.com/free-psd/abstract-background-with-opened-book_23-2149085907.jpg" alt="Book img"><br>
+       <br> <h2><p>"Your one-stop destination for the books "</p></h2>
+        <h3>Do you encounter any difficulties while searching for books?</h3><br>
+        <h4><i>SVECW BOOK HUB can solve your difficulty.</i></h4>
+  </div>
+
+<div class="container">
+<div class="row">
+<div class="col">
+            <form onsubmit = "return validate()"   action = "frameSet.html" align="center">
+  <div class="container">
+    <h1>Sign Up</h1>
+    <hr>
+
+    <label for="email"><b>Email</b></label><br>
+    <input type="email" placeholder="Enter Email" name="email" id = "email" required><br>
+    <span id="emailerror" class="test-warning"></span>
+
+    <label for="uname"><b>Username</b></label><br>
+    <input type="text" placeholder="Enter username" id = "username" name="uname" required><br>
+     <span id="usererror" class="test-warning"></span>
+
+    <label for="psw"><b>Password</b></label><br>
+    <input type="password" placeholder="Enter Password" id = "pwd" name="psw" required><br>
+     <span id="pwderror" class="test-warning"></span>
+   
+    <label>
+      <input type="checkbox" checked="checked" name="remember" > Remember me
+    </label>
+
+    <div class="clearfix">
+      <button type="submit" class="signupbtn">Sign Up</button>
+    </div>
+  </div>
+</form>
+
+</div>
+<div class="col">
+<form action="frameSet.html" align="center">
+
+  <div class="container">
+<h1>Log In</h1>
+    <hr>
+
+    <label for="uname"><b>Username\Email</b></label><br>
+    <input type="text" placeholder="Enter Username" name="uname" required><br>
+
+    <label for="psw"><b>Password</b></label><br>
+    <input type="password" placeholder="Enter Password" name="psw" required><br>
+       
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label><br>
+<button type="submit">Login</button><br>
+  </div>
+  
+</form>
+
+</div>
+</div>
+</div>
+<script>
+function validate(){
+var user = document.getElementById("username").value;
+var pwd = document.getElementById("pwd").value;
+var email = document.getElementById("email").value;
+
+//Regular expression 
+
+var reg = /^[A-Za-z]{6,}$/;
+var reg1 = /^[A-Za-z0-9]{6,}$/;
+var reg2 = /^[A-Za-z0-9.!#$%&'+-/=?^_{|}~]+@[a-zA-Z0-9]+)*$/;
+
+//Testing/Checking
+
+if(user.match(reg)){
+document.getElementById("usererror").innerHTML = " ";
+}
+else{
+document.getElementById("usererror").innerHTML = "Invalid UserName";
+return false;
+}
+
+if(pwd.match(reg)){
+document.getElementById('pwderror').innerHTML = " ";
+}
+else{
+document.getElementById('pwderror').innerHTML = "Invalid Password";
+return false;
+}
+
+if(email.match(reg)){
+document.getElementById('emailerror').innerHTML = " ";
+}
+else{
+document.getElementById('emailerror').innerHTML = "Invalid Email";
+return false;
+}
+}
+</script>
+</body>
+</html>
